@@ -6,36 +6,41 @@ public class Employee {
     private int extraHour;
     private int hourlyRate;
 
+    public Employee(int baseSalary, int extraHour, int hourlyRate) {
+     setBaseSalary(baseSalary);
+     setHourlyRate(hourlyRate);
+     setExtraHour(extraHour);
+    }
 
     public int wageCalculator(){
         return  baseSalary + extraHour * hourlyRate;
     }
 
-    public int getBaseSalary() {
+    private int getBaseSalary() {
         return baseSalary;
     }
 
-    public void setBaseSalary(int baseSalary) {
+    private void setBaseSalary(int baseSalary) {
         if (baseSalary < 0)
             throw new IllegalArgumentException("illegal argument passed");
         this.baseSalary = baseSalary;
     }
 
-    public int getExtraHour() {
+    private int getExtraHour() {
         return extraHour;
     }
 
-    public void setExtraHour(int extraHour) {
+    private void setExtraHour(int extraHour) {
         if (extraHour<0)
             throw new IllegalArgumentException("Wrong Arguments Passed");
         this.extraHour = extraHour;
     }
 
-    public int getHourlyRate() {
+    private int getHourlyRate() {
         return hourlyRate;
     }
 
-    public void setHourlyRate(int hourlyRate) {
+    private void setHourlyRate(int hourlyRate) {
         if (hourlyRate < 0)
         throw new IllegalArgumentException("Wrong Arguments Passed");
         this.hourlyRate = hourlyRate;
